@@ -9,9 +9,7 @@ public:
               ans=ans+address[i];
             else if(address[i]=='.')
             {
-                ans=ans+'[';
-                ans=ans+'.';
-                ans=ans+']';
+                ans=ans+"[.]";
             }
         }
         return ans;
