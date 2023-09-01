@@ -20,7 +20,7 @@ public:
         dfs(1,vis,adj);
         int mini=INT_MAX;
         for(auto it:roads){
-            if(vis[it[0]] && vis[it[1]])
+            if(vis[it[0]] || vis[it[1]])
                 mini=min(mini,it[2]);
         }
         return mini;
