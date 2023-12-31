@@ -5,13 +5,15 @@ public:
         if(n<=4)
             return 0;
         sort(nums.begin(),nums.end());
-    int anse=min(abs(nums[n-1]-nums[3]),abs(nums[0]-nums[n-4]));
-    int ansm=min(abs(nums[2]-nums[n-2]),abs(nums[n-3]-nums[1]));
+        int ans=INT_MAX;
+      for(int i=0;i<4;i++){
+          ans=min(ans,abs(nums[i]-nums[n-(4-i)]));
+      }
         
     
         
     
-        return min(anse,ansm);
+        return ans;
 
     }
 };
