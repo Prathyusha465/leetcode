@@ -22,15 +22,13 @@ public:
                 st2.pop();
             }
             if(st2.empty())
-                rm[i]=-1;
+                rm[i]=n;
             else
                 rm[i]=st2.top();
             st2.push(i);
         }
         int ans=0;
         for(int i=0;i<n;i++){
-            if(rm[i]==-1)
-                rm[i]=n;
             int maxi= (rm[i]-1-lm[i])*heights[i];
             ans=max(maxi,ans);
         }
