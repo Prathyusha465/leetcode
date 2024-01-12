@@ -3,18 +3,20 @@ public:
     bool halvesAreAlike(string s) {
       vector<char>v1;
      vector<char>v2;
+        int count1=0;
+        int count2=0;
         int n=s.size();
         for(int i=0;i<n/2;i++)
         {
             if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u' || s[i]=='A' || s[i]=='E' || s[i]=='I' || s[i]=='O' || s[i]=='U')
-                v1.push_back(s[i]);
+                count1++;
         }
         for(int i=n/2;i<n;i++)
         {
             if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u' || s[i]=='A' || s[i]=='E' || s[i]=='I' || s[i]=='O' || s[i]=='U')
-                v2.push_back(s[i]);
+                count2++;
         }
-        if(v1.size()==v2.size())
+        if(count1==count2)
             return true;
         return false;
     }
