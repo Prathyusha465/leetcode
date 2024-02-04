@@ -13,8 +13,6 @@ public:
         {
             mp[s[j]]--;
             if (mp[s[j]] == 0) count--;
-            if (count == 0)
-            {
                 while (count == 0)
                 {
                     if (ans > j - i + 1)
@@ -28,7 +26,7 @@ public:
                         count++;
                     i++;
                 }
-            }
+            
             j++;
         }
         if(ans!= INT_MAX) 
