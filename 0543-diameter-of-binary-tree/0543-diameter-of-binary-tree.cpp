@@ -11,8 +11,8 @@
  */
 class Solution {
 public:
-    int val=0;
-    int helper(TreeNode*root){
+   int val=0;
+    int helper(TreeNode* root){
         if(root==NULL)
             return 0;
         int lh=helper(root->left);
@@ -21,10 +21,9 @@ public:
         return 1+max(lh,rh);
     }
     int diameterOfBinaryTree(TreeNode* root) {
-        if(root==NULL)
-            return 0;
-       
-       helper(root);
+       if(root==NULL)
+           return 0;
+      helper(root);
         return val;
     }
 };
