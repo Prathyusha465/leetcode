@@ -12,18 +12,21 @@
 class Solution {
 public:
     int sum=0;
-    void helper(TreeNode* root, int val){
+    void helper(TreeNode* root, int &val){
         if(root==NULL)
             return;
         val=val*2+root->val;
+        cout<<"val "<<val<<endl;
         if(!root->left && !root->right){
             sum=sum+val;
         }
         helper(root->left,val);
         helper(root->right,val);
+        val=val/2;
     }
     int sumRootToLeaf(TreeNode* root) {
-        helper(root,0);
+        int val=0;
+        helper(root,val);
         return sum;
     }
 };
